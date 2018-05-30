@@ -16,8 +16,19 @@ public class Mensaje {
     
     @Id
     private String id;
-    LocalDate fecha;
+    private LocalDate fecha;
+    private String cuerpo;
 
+    public Mensaje(String id, LocalDate fecha, String cuerpo) {
+        this.id = id;
+        this.fecha = fecha;
+        this.cuerpo = cuerpo;
+    }
+    
+  public Mensaje() {
+    }
+  
+  
     Mensaje(LocalDate fecha, String mi_primer_mensaje) {
         
     }
@@ -33,14 +44,17 @@ public class Mensaje {
     public Mensaje(LocalDate fecha) {
         this.fecha = fecha;
     }
-    private String cuerpo;
+
 
     public Mensaje(String cuerpo) {
         this.cuerpo = cuerpo;
     }
-    
-    public Mensaje() {
+
+    @Override
+    public String toString() {
+        return "Mensaje{" + "id=" + id + ", fecha=" + fecha + ", cuerpo=" + cuerpo + '}';
     }
+    
  
     public String getId() {
         return id;
