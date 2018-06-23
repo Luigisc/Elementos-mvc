@@ -67,7 +67,7 @@ public class ControladorMensaje {
     }
        
        //caso e):Borrar
-       @DeleteMapping("/mensaje/(id)")
+       @DeleteMapping("/mensaje/{id}")
        public Estatus borrarPorID(@PathVariable String id) {
         Mensaje mensa = new Mensaje();
         
